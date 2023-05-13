@@ -5,7 +5,8 @@ import java.io.File;
 public enum FileExtension {
 
   CSV(".csv"),
-  TXT(".txt");
+  TXT(".txt"),
+  JSON(".json");
 
   private final String fileExtension;
 
