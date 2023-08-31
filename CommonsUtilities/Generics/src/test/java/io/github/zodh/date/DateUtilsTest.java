@@ -18,7 +18,7 @@ class DateUtilsTest {
   @DisplayName("Should generate an ISO 8601 Now Timestamp")
   void givenMethodCallWhenNeedNowTimestampAsISO8601FormatThenGenerateISO8601Timestamp() {
     // arrange and act
-    var result = DateUtils.generateISO8601Timestamp();
+    var result = DateUtils.generateISO8601Timestamp("GMT-3");
     var instantDate = Long.parseLong(DateUtils.fromISO8601TimestampToEpochTime(result));
 
     // assert

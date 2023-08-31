@@ -21,10 +21,10 @@ public class DateUtils {
   public static final String ZONE_ID_ETC_UTC = "Etc/UTC";
   public static final String DD_MM_YYYY_PATTERN = "dd-MM-yyyy";
 
-  public static String generateISO8601Timestamp() {
-    var timezone = TimeZone.getTimeZone("UTC");
+  public static String generateISO8601Timestamp(String timezone) {
+    var timezoneAsObject = TimeZone.getTimeZone(timezone);
     var simpleDateFormate = new SimpleDateFormat(ISO_8601_PATTERN);
-    simpleDateFormate.setTimeZone(timezone);
+    simpleDateFormate.setTimeZone(timezoneAsObject);
     return simpleDateFormate.format(new Date());
   }
 
